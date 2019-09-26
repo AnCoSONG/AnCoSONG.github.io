@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-radar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="kQYq54rl7U">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=“PingFang SC”:300,300italic,400,400italic,700,700italic|Exo 2:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Dancing Script:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端,JavaScript,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="AnCo Sun Personal Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="这是一篇字节跳动前端实习生面试的准备笔记，摘了我在网上搜索到的一些前辈被问到的问题，希望有所准备能够多答几个。">
+<meta name="keywords" content="前端,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字节跳动前端面试题笔记(1)">
+<meta property="og:url" content="http://ancosun.top/2019/09/03/字节跳动前端面试题笔记/index.html">
+<meta property="og:site_name" content="AnCo Sun Personal Blog">
+<meta property="og:description" content="这是一篇字节跳动前端实习生面试的准备笔记，摘了我在网上搜索到的一些前辈被问到的问题，希望有所准备能够多答几个。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-17T02:49:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字节跳动前端面试题笔记(1)">
+<meta name="twitter:description" content="这是一篇字节跳动前端实习生面试的准备笔记，摘了我在网上搜索到的一些前辈被问到的问题，希望有所准备能够多答几个。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ancosun.top/2019/09/03/字节跳动前端面试题笔记/">
+
+
+
+
+
+  <title>字节跳动前端面试题笔记(1) | AnCo Sun Personal Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AnCo Sun Personal Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Sometimes it's hard 2 face reality</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/music/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br>
+            
+            云音乐
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ancosun.top/2019/09/03/字节跳动前端面试题笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AnCo Sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AnCo Sun Personal Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">字节跳动前端面试题笔记(1)</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-03T20:15:21+08:00">
+                2019-09-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-17T10:49:32+08:00">
+                2019-09-17
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/09/03/字节跳动前端面试题笔记/" class="leancloud_visitors" data-flag-title="字节跳动前端面试题笔记(1)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3,755
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是一篇字节跳动前端实习生面试的准备笔记，摘了我在网上搜索到的一些前辈被问到的问题，希望有所准备能够多答几个。</p>
+<a id="more"></a>
+<h3 id="1-单链表逆序输出，不能申请内存空间。"><a href="#1-单链表逆序输出，不能申请内存空间。" class="headerlink" title="1. 单链表逆序输出，不能申请内存空间。"></a>1. 单链表逆序输出，不能申请内存空间。</h3><p>标签：<code>算法</code></p>
+<p>这个题网上有一些解法。这道题不能开辟新空间，所以不能直接用栈来做。</p>
+<ul>
+<li><p>第一种方法是递归，这个递归非常巧妙!</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(LinkedList* L)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (L-&gt;Next!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="comment">//如果L链表当前位置还有下一个节点</span></span><br><span class="line">        <span class="comment">//说明还没到最后，对当前的节点的下一个调用reverse</span></span><br><span class="line">        <span class="comment">//如果还有下一个，就继续</span></span><br><span class="line">        <span class="comment">//直到下一个节点为Null，此时说明已经到了最后一个点</span></span><br><span class="line">        <span class="comment">//这时，判断会跳出，进入print</span></span><br><span class="line">        <span class="comment">//递归将会</span></span><br><span class="line">        reverse(L-&gt;Next); </span><br><span class="line">    &#125;</span><br><span class="line">    print(L-&gt;Data); <span class="comment">// 在递归回当前节点之后，再输出当前节点的位置</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法是三指针来实现链表的逆序。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(LinkedList* node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkedList* prev; <span class="comment">// 第一个指针 指向前一个节点，辅助head调头</span></span><br><span class="line">    LinkedList* head; <span class="comment">// 第二个指针 指向将要调头的节点</span></span><br><span class="line">    LinkedList* next; <span class="comment">//第三个指针 next是为了让head可以向后移动</span></span><br><span class="line">    </span><br><span class="line">    prev = <span class="literal">NULL</span>; <span class="comment">//prev指向一个空区域</span></span><br><span class="line">    head = node; <span class="comment">//head指向头</span></span><br><span class="line">    next = node-&gt;next; <span class="comment">//next指向下一个</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*将head的下一个指向prev，表明头已经调转了方向</span></span><br><span class="line"><span class="comment">    head-&gt;next = prev; </span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    //将prev，head，next都往下一个移动</span></span><br><span class="line"><span class="comment">    prev = head;</span></span><br><span class="line"><span class="comment">    head = next;</span></span><br><span class="line"><span class="comment">    next = head-&gt;next;</span></span><br><span class="line"><span class="comment">    */</span> </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 循环上面4行,当head进入Null时则表明已经全部倒置</span></span><br><span class="line">    <span class="comment">// 即写作</span></span><br><span class="line">    <span class="keyword">while</span>(head!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        head-&gt;next = prev;</span><br><span class="line">        prev = head;</span><br><span class="line">        head = next;</span><br><span class="line">        next = head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//这个时候prev就是新链表的头指针了 可以返回也可以直接对prev头指针使用链表自身的打印方法</span></span><br><span class="line">    <span class="keyword">return</span> prev;</span><br><span class="line">    <span class="comment">// OR</span></span><br><span class="line">    printList(prev);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>这道题总体来说我觉得已经很难了…虽然肯定是基本的算法题…</p>
+</blockquote>
+<h3 id="2-0-1-0-2-0-3吗，为什么？"><a href="#2-0-1-0-2-0-3吗，为什么？" class="headerlink" title="2. 0.1+0.2===0.3吗，为什么？"></a>2. 0.1+0.2===0.3吗，为什么？</h3><p>这道题我倒是知道考察的是内存中对浮点数的近似存储。</p>
+<p>根据以前基础课学的内容，计算机内部表示数是用二进制。怎么做呢？</p>
+<p>比如一个浮点数是采用32位存储的（JS中Number是64位的，见下题，这里只是举例说明问题），其中</p>
+<ul>
+<li>1位是符号位</li>
+<li>8位是指数位</li>
+<li>25位是尾数，这个直接决定了到底有多精确</li>
+</ul>
+<p>首先比如，8.25，这个对应的二进制数怎么算呢？要分成整数部分和小数部分。</p>
+<p>8对应$ 2^3 $也就是1000,而0.25则采用乘法, 0.25*2 = 0.5, 0.5*2 = 1,说明0.25*2^2得1，那么小数部分就是.01，也就是$ 2^-2 $，因此8.25就对应1000.01，这样肯定不好看嘛，所以就转换成1.00001*$ 2^3 $，这样8.25就可以存储为</p>
+<blockquote>
+<p>上面的说法有误，并不是因为好看的关系，这个其实是ISO 754标准，采用移码去存储float</p>
+</blockquote>
+<p>0 00000011 10000100000000000…补够25个</p>
+<p>所以就会出现问题！</p>
+<p>当0.1求其二进制表达时，乘2是无法乘尽的</p>
+<p>0.1*2 = 0.2 # 0</p>
+<p>0.2*2 = 0.4 # 0</p>
+<p>0.4*2 = 0.8 # 0</p>
+<p>0.8*2 = 1.6 # 1</p>
+<p>0.6*2 = 1.2 # 1</p>
+<p>0.2*2 = 0.4 # 0</p>
+<p>这回是一个无限循环,因此，计算机只能近似的存储这种值</p>
+<p>导致0.1 + 0.2 !== 0.3</p>
+<p>如何让他们相等呢？用到Number.EPSILON，这个值在JS中是$2^-52$次，当误差小于这个值，则可以判断相等</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">numbersEqual</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.abs(a-b)&lt;<span class="built_in">Number</span>.EPSILON; <span class="comment">//</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a=<span class="number">0.1</span>+<span class="number">0.2</span>， b=<span class="number">0.3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(numbersEqual(a,b));    <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Number-的存储空间是多大，如果后台发送了一个超过最大字节的数字怎们办？"><a href="#3-Number-的存储空间是多大，如果后台发送了一个超过最大字节的数字怎们办？" class="headerlink" title="3.Number()的存储空间是多大，如果后台发送了一个超过最大字节的数字怎们办？"></a>3.Number()的存储空间是多大，如果后台发送了一个超过最大字节的数字怎们办？</h3><p>JS的Number安全值是MAX_SAFE_INTEGER, $2^{53}-1$。因此大于这个数就会出现不精确的情况，对于大数问题，可以采用</p>
+<ul>
+<li>数组</li>
+<li>字符串</li>
+</ul>
+<p>去解决。</p>
+<h3 id="4-垂直居中实现方法"><a href="#4-垂直居中实现方法" class="headerlink" title="4.垂直居中实现方法"></a>4.垂直居中实现方法</h3><p>这个我自己只知道line-height等于盒子高这种方法，其实有很多。</p>
+<ul>
+<li><p>position: relative; top:50%; transformY: (-50%)</p>
+<blockquote>
+<p>设置相对于顶部便宜50%的外盒高，导致整体会偏下，偏下多少呢？偏一个自身的一半，因为其是top50%确实是把需居中物体放到中心了，只是盒子只有顶部在中线，也就是只需要往上移动一半就可以了，所以transformY:(-50%)即可,就是把自己的Y轴向上移动自身的一半</p>
+</blockquote>
+<blockquote>
+<p>Position的属性也是重点考查对象</p>
+</blockquote>
+</li>
+<li><p>display: flex; 这个不要太好用了！</p>
+<blockquote>
+<p>flex布局也是考查的一个重点，需要知道一些flex的常用属性; 比如flex-flow: nowrap row;</p>
+<p>align-items: center; justify-content: center; 之后会专门讲!!这个必须要一次性记牢，写一遍也加深我自己的记忆，每次用都查文档。。。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: flex;</span><br><span class="line">	<span class="attribute">align-items</span>: center; <span class="comment">/*定义body的元素垂直居中*/</span></span><br><span class="line">	<span class="attribute">justify-content</span>: center; <span class="comment">/*定义body的里的元素水平居中*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>line-height结合vertical-align: middle;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-class">.item</span>&#123;</span><br><span class="line">    vertical-align:middle; //居中 还有top bottom 以及 baseline</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>display和vertical-align结合</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>:table-cell;</span><br><span class="line">    <span class="attribute">vertical-align</span>:middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>原博中记录：vertical-align属性只对拥有valign特性的html元素起作用，例如表格元素中的等等</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="5-跨域、jsonp原理、CORS原理"><a href="#5-跨域、jsonp原理、CORS原理" class="headerlink" title="5.跨域、jsonp原理、CORS原理"></a>5.跨域、jsonp原理、CORS原理</h3><p>这一道题也太大了吧…不过都是去解决跨域嘛，之前做项目时也遇到了这个问题，我现在知道的方法有</p>
+<ul>
+<li>cors</li>
+<li>jsonp</li>
+<li>proxy代理</li>
+</ul>
+<p>只有cors是非常认真的用了，proxy代理知道了原理，就是替换请求头嘛，jsonp还不是太了解，下面详细介绍一下。</p>
+<p>首先第一个问题当然是，<strong>什么是跨域？</strong></p>
+<p>跨域源自互联网的<a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">同源策略</a>，参考<a href="https://blog.csdn.net/tjcjava/article/details/76468225" target="_blank" rel="noopener">该地址</a>的说法，浏览器从一个域名的网页去请求另一个域名的资源时，<strong>域名</strong>、<strong>端口</strong>、<strong>协议</strong>任一不同，都是跨域。</p>
+<p>那么如何解决呢？</p>
+<ul>
+<li>CORS，Cross Origin Resource Share</li>
+<li>JSONP(JSON with Padding)</li>
+<li>NGINX反向代理</li>
+<li>ProxyTable</li>
+<li>等等</li>
+</ul>
+<h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><blockquote>
+<p>参考自<a href="https://segmentfault.com/a/1190000017867312?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000017867312?utm_source=tag-newest</a></p>
+</blockquote>
+<p>CORS是一个<strong>跨域资源共享</strong>方案，为了解决跨域问题，通过增加一系列请求头和响应头，规范安全地进行跨站数据传输。</p>
+<h5 id="请求头包括"><a href="#请求头包括" class="headerlink" title="请求头包括"></a>请求头包括</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">请求头</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Origin</strong></td>
+<td style="text-align:left">Origin头在跨域请求或预先请求中，标明发起跨域请求的源域名。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Access-Control-Request-Method</strong></td>
+<td style="text-align:left">Access-Control-Request-Method头用于表明跨域请求使用的实际HTTP方法</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Access-Control-Request-Headers</strong></td>
+<td style="text-align:left">Access-Control-Request-Headers用于在预先请求时，告知服务器要发起的跨域请求中会携带的请求头信息</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>with-credentials</strong></td>
+<td style="text-align:left"><strong>跨域请求携带cookie</strong></td>
+</tr>
+</tbody>
+</table>
+<h5 id="响应头主要包括"><a href="#响应头主要包括" class="headerlink" title="响应头主要包括"></a>响应头主要包括</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">响应头</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Access-Control-Allow-Origin</strong></td>
+<td style="text-align:left">Access-Control-Allow-Origin头中携带了服务器端验证后的允许的跨域请求域名，可以是一个具体的域名或是一个*（表示任意域名）。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Access-Control-Expose-Headers</strong></td>
+<td style="text-align:left">Access-Control-Expose-Headers头用于允许返回给跨域请求的响应头列表，在列表中的响应头的内容，才可以被浏览器访问。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Access-Control-Max-Age</strong></td>
+<td style="text-align:left">Access-Control-Max-Age用于告知浏览器可以将预先检查请求返回结果缓存的时间，在缓存有效期内，浏览器会使用缓存的预先检查结果判断是否发送跨域请求。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Access-Control-Allow-Methods</strong></td>
+<td style="text-align:left">Access-Control-Allow-Methods用于告知浏览器可以在实际发送跨域请求时，可以支持的请求方法，可以是一个具体的方法列表或是一个*（表示任意方法）。</td>
+</tr>
+</tbody>
+</table>
+<p>所以如何实现跨域呢？服务端在Access-Control-Allow-Origin中设置可以请求的请求头即可。携带Cookies需要前端打开with-credentials，服务端打开credentials，这个涉及到session啊等等需要cookie的地方，尽量打开。</p>
+<p>下面是我在自己项目中的配置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// KOA后端</span></span><br><span class="line"><span class="keyword">const</span> allow_origin = [<span class="string">'http://localhost:8080'</span>, <span class="string">'http://192.168.1.106:8080'</span>]</span><br><span class="line">app.use(cors(&#123;</span><br><span class="line">  origin: <span class="function">(<span class="params">ctx</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (ctx.url === <span class="string">"/public"</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"*"</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(ctx.header.origin)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; allow_origin.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (allow_origin[i] === ctx.header.origin) &#123;</span><br><span class="line">          <span class="keyword">return</span> allow_origin[i];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  credentials: <span class="literal">true</span></span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line"><span class="comment">//Vue前端Axios配置页面</span></span><br><span class="line"><span class="keyword">let</span> config = &#123;</span><br><span class="line">  <span class="comment">// baseURL: process.env.baseURL || process.env.apiUrl || ""</span></span><br><span class="line">  <span class="comment">// timeout: 60 * 1000, // Timeout</span></span><br><span class="line">  withCredentials: <span class="literal">true</span>, <span class="comment">// Check cross-site Access-Control</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> _axios = axios.create(config);</span><br><span class="line">Vue.axios = _axios;</span><br><span class="line"><span class="built_in">window</span>.axios = _axios;</span><br><span class="line"><span class="built_in">Object</span>.defineProperties(Vue.prototype, &#123;</span><br><span class="line">    axios: &#123;</span><br><span class="line">      <span class="keyword">get</span>() &#123;</span><br><span class="line">        <span class="keyword">return</span> _axios;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    $axios: &#123;</span><br><span class="line">      <span class="keyword">get</span>() &#123;</span><br><span class="line">        <span class="keyword">return</span> _axios;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>这是W3C标准，应该说是官方解法了。</p>
+<h4 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h4><p>JSON With Padding，其实是利用了Script，img，iframe标签可以跨域访问的特性，其中iframe可以通过添加form实现post。</p>
+<h5 id="下面是Script例子"><a href="#下面是Script例子" class="headerlink" title="下面是Script例子"></a>下面是Script例子</h5><p><strong>前端</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript">    script.type = <span class="string">'text/javascript'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">// 传参并指定回调执行函数为getData</span></span></span><br><span class="line"><span class="javascript">    script.src = <span class="string">'http://localhost:8080/users?username=xbc&amp;callback=handleData'</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.body.appendChild(script);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 回调执行函数, 这个函数当script get到返回的handleData(&#123;&#125;)后会由于script标签而立即执行</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 这里的handleData就可以算是回调函数</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">handleData</span>(<span class="params">res</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        data = <span class="built_in">JSON</span>.stringify(res)</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(data);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>后端</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> params = querystring.parse(req.url.split(<span class="string">'?'</span>)[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">var</span> fn = params.callback;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// jsonp返回设置</span></span><br><span class="line">    res.writeHead(<span class="number">200</span>, &#123; <span class="string">'Content-Type'</span>: <span class="string">'text/javascript'</span> &#125;);</span><br><span class="line">    <span class="keyword">var</span> data = &#123;</span><br><span class="line">        user: <span class="string">'xbc'</span>,</span><br><span class="line">        password: <span class="string">'123456'</span></span><br><span class="line">    &#125;</span><br><span class="line">    res.write(fn + <span class="string">'('</span> + <span class="built_in">JSON</span>.stringify(data) + <span class="string">')'</span>);</span><br><span class="line"></span><br><span class="line">    res.end();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这种写法导致前端会拿到这样的结果</p>
+<p>handleData({“user”:”xbc”, “password”:”123456”})</p>
+<p>由于Script是立即执行的，所以handleData作为回调函数就立即执行，从而实现了异步跨域获取数据。</p>
+<blockquote>
+<p>很像一个trick而不是一种方法</p>
+</blockquote>
+<h5 id="iFrame"><a href="#iFrame" class="headerlink" title="iFrame"></a>iFrame</h5><p>利用空iframe+form实现跨域post可以说更骚了</p>
+<p>例子来自<a href="https://segmentfault.com/a/1190000015597029?utm_source=tag-newest" target="_blank" rel="noopener">大佬</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 前端</span></span><br><span class="line"><span class="keyword">const</span> requestPost = <span class="function">(<span class="params">&#123;url, data&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 首先创建一个用来发送数据的iframe.</span></span><br><span class="line">  <span class="keyword">const</span> iframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>)</span><br><span class="line">  iframe.name = <span class="string">'iframePost'</span></span><br><span class="line">  iframe.style.display = <span class="string">'none'</span></span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(iframe)</span><br><span class="line">  <span class="keyword">const</span> form = <span class="built_in">document</span>.createElement(<span class="string">'form'</span>)</span><br><span class="line">  <span class="keyword">const</span> node = <span class="built_in">document</span>.createElement(<span class="string">'input'</span>)</span><br><span class="line">  <span class="comment">// 注册iframe的load事件处理程序,如果你需要在响应返回时执行一些操作的话.</span></span><br><span class="line">  iframe.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'post success'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">// 将post链接设置</span></span><br><span class="line">  form.action = url</span><br><span class="line">  <span class="comment">// 在指定的iframe中执行form,因为表单提交会造成页面更改，这样将target指向iframe可   // 以使iframe成为form提交的页面</span></span><br><span class="line">  form.target = iframe.name</span><br><span class="line">  form.method = <span class="string">'post'</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> name <span class="keyword">in</span> data) &#123;</span><br><span class="line">    node.name = name</span><br><span class="line">    node.value = data[name].toString()</span><br><span class="line">    form.appendChild(node.cloneNode())</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 表单元素需要添加到主文档中.</span></span><br><span class="line">  form.style.display = <span class="string">'none'</span></span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(form)</span><br><span class="line">  form.submit()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 表单提交后,就可以删除这个表单,不影响下次的数据发送.</span></span><br><span class="line">  <span class="built_in">document</span>.body.removeChild(form)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 使用方式</span></span><br><span class="line">requestPost(&#123;</span><br><span class="line">  url: <span class="string">'http://localhost:9871/api/iframePost'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'helloIframePost'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>跨域Post就顺利执行了。</p>
+<p>这个方法无疑是最复杂的，但是确实非常tricky，并且iframe方法可以通过油猴附着在其它网站上来进行跨域提交数据，还是很好用的技巧。</p>
+<h4 id="NGINX反向代理"><a href="#NGINX反向代理" class="headerlink" title="NGINX反向代理"></a>NGINX反向代理</h4><p>这个不太了解，但是原理就是通过NGINX proxy_pass 替换请求头到另一个地址。</p>
+<p>详见<a href="https://segmentfault.com/a/1190000012859206" target="_blank" rel="noopener">这里</a></p>
+<h4 id="ProxyTable等前端代理"><a href="#ProxyTable等前端代理" class="headerlink" title="ProxyTable等前端代理"></a>ProxyTable等前端代理</h4><p>webpack的配置文件中可以用proxyTable去修改对应url使请求头为后端的地址</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">    <span class="string">'/api'</span>: &#123;</span><br><span class="line">      target: <span class="string">'http://www.abc.com'</span>,  <span class="comment">//目标接口域名</span></span><br><span class="line">      changeOrigin: <span class="literal">true</span>,  <span class="comment">//是否跨域</span></span><br><span class="line">      pathRewrite: &#123;</span><br><span class="line">        <span class="string">'^/api'</span>: <span class="string">'/api'</span>   <span class="comment">//重写接口</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法和NGINX的思路都是替换请求地址，我觉得这两种的好用程度也还可以。但是Vue-Cli 3.0里面找不到config文件夹，貌似是要自己写Vue.config.js，然后在devServer字典下写proxy，写法同上，但是没成功过故不说…</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>我觉得总体上讲，代理肯定是最方便的，其次是CORS，只用GET也可以选择JSONP，不过代理好一劳永逸，之后部署的时候熟悉一下NGINX。</p>
+<h3 id="6-Proxy对象"><a href="#6-Proxy对象" class="headerlink" title="6. Proxy对象"></a>6. Proxy对象</h3><p>这个我真的是现学了…Proxy是ES6新标准，同时还有Reflect和它一起提供强大的代理功能，可以在语言层面改变一些行为。</p>
+<p>首先, 定义一个Proxy，这样target的行为就会被handler代理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, handler);</span><br><span class="line"><span class="comment">// 或者使用 如下 创建一个可撤销的proxy </span></span><br><span class="line"><span class="keyword">let</span> p = <span class="built_in">Proxy</span>.revocable(target, hanlder)</span><br><span class="line">p.revoke() <span class="comment">// 即可撤销 然而兼容性感人，只有firefox实现了</span></span><br></pre></td></tr></table></figure>
+<p>下面演示怎么用Proxy改变行为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> handler = &#123;</span><br><span class="line">    <span class="keyword">get</span>(target, key, receiver)&#123;</span><br><span class="line">      <span class="comment">// do something </span></span><br><span class="line">      <span class="comment">// 通过Reflect来执行默认方法</span></span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Reflect</span>.get(target, key, receiver)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>(target, key, receiver)&#123;</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Reflect</span>.set(target, key, receiver)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Handler可以覆盖很多方法，详见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler" target="_blank" rel="noopener">Handler描述</a></p>
+<h3 id="7-Promise原理"><a href="#7-Promise原理" class="headerlink" title="7. Promise原理"></a>7. Promise原理</h3><p>只知道大概怎么用，一个then 一个catch… </p>
+<p>Promise/A+标准定义，一个promise只能是pending、fulfilled、rejected三种状态，状态迁移只能是pending-&gt;fulfilled或pending-&gt;rejected。</p>
+<p>Promise的then方法如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.then(onFulfilled, onRejected)</span><br></pre></td></tr></table></figure>
+<p>then返回一个promise，仍可以继续调用then方法。</p>
+<p>大概就这样吧…只知道是用来解决回调地狱的</p>
+<h3 id="8-JavaScript-EventLoop"><a href="#8-JavaScript-EventLoop" class="headerlink" title="8. JavaScript EventLoop"></a>8. JavaScript EventLoop</h3><p>终于还是来到了最恶心的Event Loop. JS</p>
+<p>只需要记一句话，<strong>“先Macro 后Micro，Macro 1，Micro 全”</strong> </p>
+<p>怎么说？</p>
+<p>首先JS把执行任务分为Macrotask和Microtask。</p>
+<h5 id="宏任务-Macrotask"><a href="#宏任务-Macrotask" class="headerlink" title="宏任务(Macrotask)"></a>宏任务(Macrotask)</h5><p>一些异步任务的回调会依次进入macrotask queue，等待后续被调用，这些异步任务包括：</p>
+<ul>
+<li>setTimeout</li>
+<li>setInterval</li>
+<li>setImmediate (Node独有)</li>
+<li>requestAnimationFrame (浏览器独有)</li>
+<li>I/O</li>
+<li>UI rendering (浏览器独有)</li>
+</ul>
+<h5 id="微任务-Microtask"><a href="#微任务-Microtask" class="headerlink" title="微任务(Microtask)"></a>微任务(Microtask)</h5><p>一些异步任务的回调会依次进入microtask queue，等待后续被调用，这些异步任务包括：</p>
+<ul>
+<li>process.nextTick (Node独有)</li>
+<li>Promise</li>
+<li>Object.observe</li>
+<li>MutationObserver</li>
+</ul>
+<p>Event Loop是如何执行的呢？</p>
+<ul>
+<li><p>执行一个Marcotask，同步代码直接执行，遇到其它的异步macrotask就将callback放入macrotask queue，将异步microtask放入microtask queue</p>
+<blockquote>
+<p>注意！！Macrotask一定是一次只能执行一个哦！！</p>
+</blockquote>
+</li>
+<li><p>一个macrotask完毕后，执行微任务，同步直接执行，微任务过程中也会继续判断有无其它异步微任务或异步宏任务，有就加入对应队列，但不同的是，微任务一旦开始执行，就一定会把微任务队列清空才会进行下一步</p>
+</li>
+<li><p>接着继续执行宏任务</p>
+</li>
+<li><p>如此循环…</p>
+</li>
+</ul>
+<p>这就是Event Loop。是不是并不难懂！！</p>
+<p>看代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">  <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">4</span>)</span><br><span class="line">  resolve(<span class="number">5</span>)</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+<p>看看学会没有！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出为</span></span><br><span class="line"><span class="number">1</span> <span class="number">4</span> <span class="number">7</span> <span class="number">5</span> <span class="number">2</span> <span class="number">3</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<p>按照上面的来就不会出错的！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    AnCo Sun
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://ancosun.top/2019/09/03/字节跳动前端面试题笔记/" title="字节跳动前端面试题笔记(1)">http://ancosun.top/2019/09/03/字节跳动前端面试题笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/05/JQuery学习笔记/" rel="next" title="JQuery学习笔记">
+                <i class="fa fa-chevron-left"></i> JQuery学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/05/字节跳动前端面试笔记-2/" rel="prev" title="字节跳动前端面试笔记(2)">
+                字节跳动前端面试笔记(2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b439de4bfeba6f5" async="async"></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzM5NC8xMzkyOA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            作者信息
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="AnCo Sun">
+            
+              <p class="site-author-name" itemprop="name">AnCo Sun</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/AnCoSONG" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1197252996@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/king-david-66" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-单链表逆序输出，不能申请内存空间。"><span class="nav-number">1.</span> <span class="nav-text">1. 单链表逆序输出，不能申请内存空间。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-0-1-0-2-0-3吗，为什么？"><span class="nav-number">2.</span> <span class="nav-text">2. 0.1+0.2===0.3吗，为什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Number-的存储空间是多大，如果后台发送了一个超过最大字节的数字怎们办？"><span class="nav-number">3.</span> <span class="nav-text">3.Number()的存储空间是多大，如果后台发送了一个超过最大字节的数字怎们办？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-垂直居中实现方法"><span class="nav-number">4.</span> <span class="nav-text">4.垂直居中实现方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-跨域、jsonp原理、CORS原理"><span class="nav-number">5.</span> <span class="nav-text">5.跨域、jsonp原理、CORS原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CORS"><span class="nav-number">5.1.</span> <span class="nav-text">CORS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#请求头包括"><span class="nav-number">5.1.1.</span> <span class="nav-text">请求头包括</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#响应头主要包括"><span class="nav-number">5.1.2.</span> <span class="nav-text">响应头主要包括</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSONP"><span class="nav-number">5.2.</span> <span class="nav-text">JSONP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#下面是Script例子"><span class="nav-number">5.2.1.</span> <span class="nav-text">下面是Script例子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iFrame"><span class="nav-number">5.2.2.</span> <span class="nav-text">iFrame</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NGINX反向代理"><span class="nav-number">5.3.</span> <span class="nav-text">NGINX反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ProxyTable等前端代理"><span class="nav-number">5.4.</span> <span class="nav-text">ProxyTable等前端代理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">5.4.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Proxy对象"><span class="nav-number">6.</span> <span class="nav-text">6. Proxy对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Promise原理"><span class="nav-number">7.</span> <span class="nav-text">7. Promise原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-JavaScript-EventLoop"><span class="nav-number">8.</span> <span class="nav-text">8. JavaScript EventLoop</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#宏任务-Macrotask"><span class="nav-number">8.0.1.</span> <span class="nav-text">宏任务(Macrotask)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#微任务-Microtask"><span class="nav-number">8.0.2.</span> <span class="nav-text">微任务(Microtask)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AnCo Sun</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">40.0k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65896388";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("cwgLnoz8fTbsbR69SnYK2SDS-gzGzoHsz", "MIzbjQAfNSgqaPx6MRjrQe9Y");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

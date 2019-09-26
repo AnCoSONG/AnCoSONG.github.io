@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-radar.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="kQYq54rl7U">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=“PingFang SC”:300,300italic,400,400italic,700,700italic|Exo 2:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Dancing Script:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="cocos creator,javascript,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="AnCo Sun Personal Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="前言这是一篇学习笔记，内容可能比较粗糙，很多部分来源于文档和教程视频，仅供参考，欢迎指正">
+<meta name="keywords" content="cocos creator,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocos creator 学习笔记">
+<meta property="og:url" content="http://ancosun.top/2019/05/02/cocos-creator-学习笔记/index.html">
+<meta property="og:site_name" content="AnCo Sun Personal Blog">
+<meta property="og:description" content="前言这是一篇学习笔记，内容可能比较粗糙，很多部分来源于文档和教程视频，仅供参考，欢迎指正">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-04T05:30:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cocos creator 学习笔记">
+<meta name="twitter:description" content="前言这是一篇学习笔记，内容可能比较粗糙，很多部分来源于文档和教程视频，仅供参考，欢迎指正">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ancosun.top/2019/05/02/cocos-creator-学习笔记/">
+
+
+
+
+
+  <title>cocos creator 学习笔记 | AnCo Sun Personal Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AnCo Sun Personal Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Sometimes it's hard 2 face reality</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/music/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br>
+            
+            云音乐
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ancosun.top/2019/05/02/cocos-creator-学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AnCo Sun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AnCo Sun Personal Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">cocos creator 学习笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-02T14:17:25+08:00">
+                2019-05-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-04T13:30:04+08:00">
+                2019-05-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/游戏开发/" itemprop="url" rel="index">
+                    <span itemprop="name">游戏开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/05/02/cocos-creator-学习笔记/" class="leancloud_visitors" data-flag-title="cocos creator 学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,458
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  19
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一篇学习笔记，内容可能比较粗糙，很多部分来源于<a href="https://docs.cocos.com/creator/api/zh/" target="_blank" rel="noopener">文档</a>和<a href="https://www.bilibili.com/video/av36321524/?p=16" target="_blank" rel="noopener">教程视频</a>，仅供参考，欢迎指正</p>
+<a id="more"></a>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h2 id="IDE和目录结构"><a href="#IDE和目录结构" class="headerlink" title="IDE和目录结构"></a>IDE和目录结构</h2><ul>
+<li><p>assets目录存放所有资源</p>
+<ul>
+<li>res //导入资源</li>
+<li>resources //代码导入资源</li>
+<li>texture //纹理资源</li>
+<li>script //js文件</li>
+<li>scene //场景文件</li>
+</ul>
+</li>
+<li><p>.meta文件：类似管理文件，方便cocos的管理</p>
+<ul>
+<li>分配了一个uuid</li>
+<li>记录了一些参数信息</li>
+</ul>
+<blockquote>
+<p>大部分省略，详见<a href="https://docs.cocos.com/creator/manual/zh/getting-started/project-structure.html" target="_blank" rel="noopener">官方文档</a> </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="偏好设置"><a href="#偏好设置" class="headerlink" title="偏好设置"></a>偏好设置</h2><ul>
+<li>将JS编辑器改为VS CODE</li>
+<li>开发环境配置</li>
+<li>项目设置：分组管理</li>
+<li>模块设置：减少包大小</li>
+<li>预览运行：修改每次打开的场景</li>
+<li>预览运行：设计分辨率，适应屏幕宽度高度等等</li>
+</ul>
+<h2 id="COCOS-生命周期函数"><a href="#COCOS-生命周期函数" class="headerlink" title="COCOS 生命周期函数"></a>COCOS 生命周期函数</h2><ul>
+<li>onLoad：加载时</li>
+<li>start：第一次Update之前，第一次渲染完成之后调用</li>
+<li>update：游戏每次刷新调用</li>
+<li>lateUpdate: 刷新后</li>
+<li>onDestroy：销毁时调用</li>
+<li>onEnable：启用时</li>
+<li>onDisable：停用时</li>
+</ul>
+<h2 id="场景树"><a href="#场景树" class="headerlink" title="场景树"></a>场景树</h2><p>creator是一个一个游戏场景组成的，由代码逻辑来控制场景跳转</p>
+<ul>
+<li>Canvas(cc.Node): 挂载一些组件: cc.Canvas …<ul>
+<li>node1: 挂载组件：cc.Sprite cc.Widget …<ul>
+<li>node1</li>
+<li>node2</li>
+<li>…</li>
+</ul>
+</li>
+<li>node2</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h2 id="CC-NODE-属性"><a href="#CC-NODE-属性" class="headerlink" title="CC.NODE 属性"></a>CC.NODE 属性</h2><ul>
+<li><p>cc.node.name:</p>
+<ul>
+<li>type：string</li>
+<li>explain:节点的名称</li>
+</ul>
+</li>
+<li><p>cc.node.active:</p>
+<ul>
+<li>type: boolean</li>
+<li>explain: 是否被激活===是否显示</li>
+</ul>
+</li>
+<li><p>cc.node.position:</p>
+<ul>
+<li>type: cc.v2(x: value,y: value)</li>
+<li>explain: 相对父节点的坐标</li>
+</ul>
+</li>
+<li><p>cc.node.rotation:</p>
+<ul>
+<li>type: number</li>
+<li>explain: 旋转，顺时针为正，逆时针为负</li>
+</ul>
+</li>
+<li><p>cc.node.scale:</p>
+<ul>
+<li>type: cc.v2(x:value, y:value)</li>
+<li>explain: 缩放放大的数值</li>
+</ul>
+</li>
+<li><p>cc.node.anchor:</p>
+<ul>
+<li>type:number</li>
+<li>explain:锚点，坐标的中心, 上1，下0，左0，右1，左下角为(0,0)，右上(1,1).依次类推.锚点数值可以小于0，也可以大于1</li>
+</ul>
+</li>
+<li><p>cc.node.size:</p>
+<ul>
+<li>type: cc.v2(x:value,y:value)</li>
+<li>explain: 控制节点大小</li>
+</ul>
+</li>
+<li><p>cc.node.color:</p>
+<ul>
+<li>type: color</li>
+<li>explain: 环境光颜色，图片本身有颜色的话会覆盖一层红光在上面</li>
+</ul>
+</li>
+<li><p>cc.node.Opacity:</p>
+<ul>
+<li>type:number(0-1)</li>
+<li>explain: 透明度,0透明，1不透明</li>
+</ul>
+</li>
+<li><p>cc.node.skew:</p>
+<ul>
+<li>type: cc.v2(x: value, y: value)</li>
+<li>explain: 扭曲节点</li>
+</ul>
+</li>
+<li><p>cc.node.Group:</p>
+<ul>
+<li><p>type: 组别</p>
+</li>
+<li><p>explain: 分组，设置节点所属组别以确定可否进行碰撞检测</p>
+<blockquote>
+<p>在项目设置分组管理中可以直接添加分组，添加分组，然后在每个节点的Group属性处都可以选择所属分组。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>cc.node.parent: 父节点</p>
+</li>
+<li><p>cc.node.children: 孩子节点数组</p>
+</li>
+<li><p>cc.tag: 节点标签</p>
+</li>
+</ul>
+<h2 id="cc-Component-介绍"><a href="#cc-Component-介绍" class="headerlink" title="cc.Component 介绍"></a>cc.Component 介绍</h2><ul>
+<li><p>所有组件都扩展自cc.Component类</p>
+</li>
+<li><p>包含node属性，方便索引组件所在的节点</p>
+<blockquote>
+<p>在cc.Class里面通过this.node即可访问得到组建的节点</p>
+</blockquote>
+</li>
+<li><p>包含name属性，获得节点的名称</p>
+</li>
+<li><p>包含enabled属性，用来控制组件的启动情况</p>
+</li>
+<li><p>组件部分生命周期函数:</p>
+<ul>
+<li>onLoad</li>
+<li>start</li>
+<li>update</li>
+<li>lateUpdate</li>
+<li>onEnabled</li>
+<li>onDisabled</li>
+</ul>
+</li>
+</ul>
+<h2 id="节点的动态操作"><a href="#节点的动态操作" class="headerlink" title="节点的动态操作"></a>节点的动态操作</h2><ul>
+<li><p>添加: this.node.addChild(new cc.Node())</p>
+</li>
+<li><p>添加节点到指定位置: this.node.insertChild()</p>
+</li>
+<li><p>节点的删除: this.node.removeChild(node, cleanup)</p>
+</li>
+<li><p>节点的清空:this.node.removeAllChildren(cleanup:boolean)</p>
+</li>
+<li><p>子节点自己删除:node.removeFromParent(); 从父节点处删除调用子节点</p>
+</li>
+<li><p>节点的搜索:</p>
+<ul>
+<li>getParent</li>
+<li>getChildByUuid</li>
+<li>getChildByName</li>
+<li>getComponent: 获取节点上指定类型的组件<ul>
+<li>getComponents</li>
+<li>getComponentInChildren</li>
+<li>getComponentsInChildren</li>
+</ul>
+</li>
+<li>find(Path):全场景查找，根据路径去查找</li>
+</ul>
+</li>
+<li><p>setLocalZOrder: 改变绘制的顺序,其实就是setZindex,通过代码动态更改zindex</p>
+<blockquote>
+<p>这个方法已经废弃，直接操作zIndex即可</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="关于脚本文件中编写cc-Class"><a href="#关于脚本文件中编写cc-Class" class="headerlink" title="关于脚本文件中编写cc.Class"></a>关于脚本文件中编写cc.Class</h2><ul>
+<li>所有的脚本都是写一个cc.Class,在cc.Class中定义了一系列内容，这些内容在组件被绑定到节点上时被new了出来，我们实际填写的是构造函数。</li>
+</ul>
+<h2 id="事件系统"><a href="#事件系统" class="headerlink" title="事件系统"></a>事件系统</h2><h3 id="系统内置事件"><a href="#系统内置事件" class="headerlink" title="系统内置事件"></a>系统内置事件</h3><h4 id="1-触摸事件"><a href="#1-触摸事件" class="headerlink" title="1.触摸事件"></a>1.触摸事件</h4><ul>
+<li><p>类型: START MOVED ENDED(节点内) CANCEL(节点外)</p>
+</li>
+<li><p>node.on():像引擎底层注册一个回调函数，这个函数会在当事件发生的时候被引擎调用</p>
+</li>
+<li><p>触摸事件枚举:</p>
+<ul>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.Node.EventType.TOUCH_START === <span class="string">'touch_start'</span> <span class="comment">//作为事件绑定的type参数传入</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cc.Node.EventType.TOUCH_MOVE</p>
+</li>
+<li><p>cc.Node.EventType.TOUCH_END</p>
+</li>
+<li><p>cc.Node.EventType.TOUCH_CANCEL</p>
+</li>
+</ul>
+</li>
+<li><p>事件绑定实例: </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.on(cc.Node.EventType.TOUCH_START, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">     <span class="comment">//do something</span></span><br><span class="line">     &#125;, <span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>事件取消绑定示例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.off(cc.Node.EventType.TOUCH_START_, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//do something</span></span><br><span class="line">&#125;, <span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>节点取消事件绑定示例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.targetOff(<span class="keyword">this</span>); <span class="comment">//取消绑定所有的事件</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回调函数的event参数方法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cc.Event标准API</span></span><br><span class="line">event.stopPropagation(); <span class="comment">//停止传递当前事件</span></span><br><span class="line">event.stopPropagationImmediate(); <span class="comment">//立即停止事件冒泡，当前节点也不会响应事件</span></span><br><span class="line">event.getCurrentTarget(); <span class="comment">//获取当前的目标节点</span></span><br><span class="line">event.getType(); <span class="comment">//获取事件类型</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>还有一些API看起来不常用 可以去 <a href="https://docs.cocos.com/creator/api/zh/classes/Event.html#%E6%96%B9%E6%B3%95" target="_blank" rel="noopener">官网API文档查看详细</a></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cc.Event标准API之外的 由cc.Event.EventTouch定义的API</span></span><br><span class="line">event.touch() <span class="comment">//获取当前触点对象</span></span><br><span class="line">event.getID() <span class="comment">//获取触点的ID，用于多点触摸的逻辑判断</span></span><br><span class="line">event.getLocation() <span class="comment">//获取触点对象位置, 字典形式，包含x和y属性</span></span><br><span class="line">event.getLocationX() <span class="comment">//获取触点X轴位置</span></span><br><span class="line">event.getLocationY() <span class="comment">//获取触点Y轴位置</span></span><br><span class="line">event.getPreviousLocation() <span class="comment">//获取触点上一次触发事件时的位置字典，包含X和y</span></span><br><span class="line">event.getStartLocation() <span class="comment">//获取触点初始时的位置</span></span><br><span class="line">event.getDelta() <span class="comment">//获取距离上一次事件移动的距离，包含x和y属性</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要注意的是，触摸事件支持多点触摸，每个触点都会发送一次事件给事件监听器。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-系统键盘事件"><a href="#2-系统键盘事件" class="headerlink" title="2. 系统键盘事件"></a>2. 系统键盘事件</h4><ul>
+<li><p>绑定键盘事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, callbackKeyDown(), <span class="keyword">this</span>, boolean)</span><br><span class="line">cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, callbackKeyUp(), <span class="keyword">this</span>, boolean)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>callback写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">switch</span>(event.keyCode)&#123;</span><br><span class="line">       <span class="keyword">case</span> cc.marco.KEY.___:</span><br><span class="line">           <span class="comment">// do something when a key is clicked down or up</span></span><br><span class="line">           <span class="keyword">break</span>;</span><br><span class="line">       <span class="keyword">case</span> cc.marco.KEY.___:</span><br><span class="line">           <span class="comment">// do something</span></span><br><span class="line">           <span class="keyword">break</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解绑</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.systemEvent.off(...) <span class="comment">// same as bind system event.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>KeyCode枚举</p>
+<blockquote>
+<p><a href="https://docs.cocos.com/creator/api/zh/enums/KEY.html" target="_blank" rel="noopener">这里查看keyCode</a> 名称表</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="3-鼠标事件"><a href="#3-鼠标事件" class="headerlink" title="3. 鼠标事件"></a>3. 鼠标事件</h4><ul>
+<li>几乎和触摸事件同理,可以在 <a href="https://docs.cocos.com/creator/manual/zh/scripting/internal-events.html#%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1" target="_blank" rel="noopener">这里</a> 查看鼠标事件 </li>
+</ul>
+<h4 id="4-其它事件"><a href="#4-其它事件" class="headerlink" title="4. 其它事件"></a>4. 其它事件</h4><ul>
+<li>设备重力传感器事件: <a href="https://docs.cocos.com/creator/manual/zh/scripting/player-controls.html#%E8%AE%BE%E5%A4%87%E9%87%8D%E5%8A%9B%E4%BC%A0%E6%84%9F%E4%BA%8B%E4%BB%B6" target="_blank" rel="noopener">查看文档</a> </li>
+<li>其它事件</li>
+</ul>
+<h4 id="5-自定义事件"><a href="#5-自定义事件" class="headerlink" title="5. 自定义事件"></a>5. 自定义事件</h4><ul>
+<li><p>如何定义和发射:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.emit(<span class="string">'type_name'</span>, arg1, arg2, arg3) <span class="comment">//emit是事件自派送，只派送给自己</span></span><br><span class="line"><span class="comment">//下面会讲到dispatchEvent派送，这个派送会进行冒泡派送，并且支持更多的参数，比较适合多参数多节点进行调用</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何接收自定义事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.on(<span class="string">'type_name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">arg1,arg2,arg3</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>事件冒泡派送: dispatchEvent</p>
+<p>事件派送可以将事件不断冒泡传递，直到碰到event.stopPropagation()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.dispatchEvent( <span class="keyword">new</span> cc.Event.EventCustom(type:string, <span class="attr">buddles</span>: boolean))</span><br><span class="line"><span class="comment">// type: 事件名称</span></span><br><span class="line"><span class="comment">// buddles: 是否冒泡</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加自定义数据和获取自定义数据: setUserData和getUserData</p>
+<blockquote>
+<p>这会赋值EventCustom.detail</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="坐标空间"><a href="#坐标空间" class="headerlink" title="坐标空间"></a>坐标空间</h2><ul>
+<li><p>几个类</p>
+<ul>
+<li>cc.Vec2</li>
+<li>cc.Size</li>
+<li>cc.Rect</li>
+<li>cc.Node</li>
+</ul>
+</li>
+<li><p>坐标空间转换</p>
+<ul>
+<li><p>节点坐标转屏幕坐标</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.convertToWorldSpace(cc.v2()) <span class="comment">//左下角为原点</span></span><br><span class="line"><span class="keyword">this</span>.node.convertToWorldSpaceAR(cc.v2()) <span class="comment">//锚点为原点</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>屏幕坐标转节点坐标</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.convertToNodeSpace()</span><br><span class="line"><span class="keyword">this</span>.node.convertToNodeSpaceAR()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>锚点</p>
+</li>
+<li><p>包围盒</p>
+<blockquote>
+<p>包围盒是指，从父级节点看子级节点，所占的面积，通过getBoundingBox得到</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.getBoundingBox() <span class="comment">// return: cc.Rect(x, y, width, height) 表示左下角的坐标和长款</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://www.cnblogs.com/dydx/p/4316063.html" target="_blank" rel="noopener">参考资料</a></p>
+</li>
+<li><p>对节点设置位置示例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> node_pos = <span class="keyword">this</span>.node.parent.convertToNodeSpaceAR(cc.v2(Your World Position)) <span class="comment">//将你要的世界(屏幕)位置转换到父节点的坐标系下</span></span><br><span class="line"><span class="keyword">this</span>.node.setPosition(node_pos) <span class="comment">//setPosition是将node设置到它父节点下的节点坐标</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>触摸移动节点示例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.setPosition(<span class="keyword">this</span>.node.parent.convertToNodeSpaceAR(event.getLocation()));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="动作系统"><a href="#动作系统" class="headerlink" title="动作系统"></a>动作系统</h2><ul>
+<li><p>动作分为</p>
+<ul>
+<li>ActionInstant</li>
+<li>ActionInterval</li>
+</ul>
+</li>
+<li><p>运行动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.runAction(Action);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>停止动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.stopAction(Action)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>停止所有动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.stopAllAction();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>延迟时间</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.delaytime(time: number)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将Function转换成ActionInstant方便嵌入动作系统</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.callFunc(<span class="function"><span class="keyword">function</span>, <span class="title">thisInFunction</span>, <span class="title">data</span>); //<span class="title">function</span>是函数, <span class="title">thisInFunction</span>是<span class="title">function</span>里的<span class="title">this</span>, <span class="title">data</span>是参数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>序列动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cc.sequence(act1, act2);</span><br><span class="line"><span class="comment">// OR</span></span><br><span class="line">cc.sequence(actArray)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重复动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//重复一次动作</span></span><br><span class="line">cc.repeat(action, time);</span><br><span class="line"><span class="comment">//持续重复</span></span><br><span class="line">cc.repeatForever(action)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同步执行动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//API的示例是</span></span><br><span class="line"><span class="keyword">var</span> actionSpawned = cc.spawn(act1, act2, act3)</span><br><span class="line"><span class="keyword">this</span>.node.runAction(actionSpawned)</span><br><span class="line"><span class="comment">//视频中说这样也可以实现同时执行</span></span><br><span class="line"><span class="keyword">this</span>.node.runAction(act1)</span><br><span class="line"><span class="keyword">this</span>.node.runAction(act2)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动作描绘函数/缓动</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.easexxx() <span class="comment">//实现动作的速率控制</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://docs.cocos.com/creator/manual/zh/getting-started/quick-start.html#%E7%BC%96%E5%86%99%E8%B7%B3%E8%B7%83%E5%92%8C%E7%A7%BB%E5%8A%A8%E4%BB%A3%E7%A0%81" target="_blank" rel="noopener">缓动效果</a></p>
+<p>详细函数名称见<a href="http://docs.cocos.com/creator/api/zh/modules/cc.html?q=ease" target="_blank" rel="noopener">缓动API</a></p>
+</blockquote>
+</li>
+<li><p>各种具体的动作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//放置</span></span><br><span class="line">cc.place(pos, [y])</span><br><span class="line"><span class="comment">//显示</span></span><br><span class="line">cc.show()</span><br><span class="line">cc.fadeIn()</span><br><span class="line"></span><br><span class="line"><span class="comment">//移动</span></span><br><span class="line">cc.moveTo()</span><br><span class="line">cc.moveBy()</span><br><span class="line"></span><br><span class="line"><span class="comment">//旋转</span></span><br><span class="line">cc.rotateTo()</span><br><span class="line">cc.rotateBy()</span><br><span class="line"></span><br><span class="line"><span class="comment">//扭曲</span></span><br><span class="line">cc.skewTo()</span><br><span class="line">cc.skewBy()</span><br><span class="line"></span><br><span class="line"><span class="comment">//缩放</span></span><br><span class="line">cc.scaleTo()</span><br><span class="line">cc.scaleBy()</span><br><span class="line"></span><br><span class="line"><span class="comment">//跳跃</span></span><br><span class="line">cc.jumpBy()</span><br><span class="line">cc.jumpTo()</span><br><span class="line"></span><br><span class="line"><span class="comment">//按贝塞尔轨迹移动</span></span><br><span class="line">cc.bezierTo()</span><br><span class="line">cc.bezierBy()</span><br><span class="line"></span><br><span class="line"><span class="comment">//闪烁</span></span><br><span class="line">cc.blink()</span><br><span class="line"></span><br><span class="line"><span class="comment">//修改透明度</span></span><br><span class="line">cc.fadeIn()</span><br><span class="line">cc.fadeOut()</span><br><span class="line">cc.fadeTo()</span><br><span class="line"></span><br><span class="line"><span class="comment">//修改颜色</span></span><br><span class="line">cc.tintTo()</span><br><span class="line">cc.tintBy()</span><br><span class="line"></span><br><span class="line"><span class="comment">//轴旋转</span></span><br><span class="line">cc.flipX()</span><br><span class="line">cc.flipY()</span><br><span class="line"></span><br><span class="line"><span class="comment">//切换显隐状态</span></span><br><span class="line">cc.toggleVisibility()</span><br><span class="line"></span><br><span class="line"><span class="comment">//移除</span></span><br><span class="line">cc.removeSelf()</span><br><span class="line"></span><br><span class="line"><span class="comment">//反转时间</span></span><br><span class="line">cc.reverseTime()</span><br><span class="line"></span><br><span class="line"><span class="comment">//对新节点赋值动作</span></span><br><span class="line">cc.targetedAction()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>详细API查看官网</p>
+</blockquote>
+</li>
+<li><p>待补充…</p>
+</li>
+</ul>
+<h2 id="Component详解"><a href="#Component详解" class="headerlink" title="Component详解"></a>Component详解</h2><ul>
+<li><p>部分内容其实和上面的差不多</p>
+</li>
+<li><p>生命周期函数</p>
+<p>补充一些介绍</p>
+<ul>
+<li>lateUpdate(dt): 在动画更新后执行</li>
+<li>update(dt): 会在动画更新前执行</li>
+<li>onEnable: 启用这个组件时调用</li>
+<li>onDisable: 禁用这个组件时调用</li>
+</ul>
+</li>
+<li><p>生命周期函数中, this指的是组件</p>
+</li>
+<li><p>名称示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.name //返回值: Canvas&lt;NodeTest&gt; 返回节点和组件名称</span><br><span class="line">this.node.name //返回值: Canvas 返回节点名称</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Properties</p>
+<ul>
+<li><p>位置: cc.v2</p>
+</li>
+<li><p>颜色: cc.color</p>
+</li>
+<li><p>大小: cc.size</p>
+</li>
+<li><p>定义示例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">speed: <span class="number">100</span> <span class="comment">//number</span></span><br><span class="line">is_debug: <span class="literal">true</span> <span class="comment">//boolean</span></span><br><span class="line">url: <span class="string">''</span> <span class="comment">//string</span></span><br><span class="line">color: cc.color()</span><br><span class="line">pos: cc.v2()</span><br><span class="line">size: cc.size()</span><br><span class="line"><span class="comment">//数组组件的简化声明</span></span><br><span class="line">strings: [cc.String]</span><br><span class="line">bools: [cc.Boolean]</span><br><span class="line">floats: [cc.Float]</span><br><span class="line">ints: [cc.Integer]</span><br><span class="line">values: [cc.Vec2]</span><br><span class="line">nodes: [cc.Node]</span><br><span class="line">frames: [cc.SpriteFrame]</span><br><span class="line">any: []</span><br><span class="line"><span class="comment">//复杂一点的类型</span></span><br><span class="line">sprite_item: &#123;</span><br><span class="line">    <span class="keyword">default</span>: <span class="literal">null</span><span class="comment">// null or [] or 对应类型的值</span></span><br><span class="line">    type: cc.Spirte </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//挂载自己定义的组件</span></span><br><span class="line"><span class="keyword">var</span> my_item = <span class="built_in">require</span>(<span class="string">'my_item'</span>)</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">my_item: &#123;</span><br><span class="line">    <span class="keyword">default</span>: [],</span><br><span class="line">    type: my_item <span class="comment">//require引入的类型</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//组件完整声明</span></span><br><span class="line">full_declear: &#123;</span><br><span class="line">    <span class="keyword">default</span>: <span class="literal">null</span>,</span><br><span class="line">    type: someType,</span><br><span class="line">    displayName: <span class="string">'somename'</span>,</span><br><span class="line">    tooltip: <span class="string">'tips'</span>,</span><br><span class="line">    visible: <span class="literal">true</span> <span class="comment">//or false 设为 false 则不在 属性检查器 面板中显示该属性</span></span><br><span class="line">    serializable: <span class="literal">true</span> or <span class="literal">false</span> <span class="comment">//设为 false 则不序列化（保存）该属性</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//get/set声明</span></span><br><span class="line">someValue: &#123;</span><br><span class="line">    <span class="keyword">get</span>: function()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>._value</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function(value)&#123;</span><br><span class="line">        <span class="keyword">this</span>._value = value</span><br><span class="line">    &#125; <span class="comment">//若只定义get，相当于只读</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关联节点时，是将节点上的组件实例挂载在这个上面，因此只要节点里包含对应的组件，就可以挂在在对应的脚本上</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>组件动态操作</p>
+<ul>
+<li><p>添加组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.addComponent(<span class="string">'component-name'</span>) <span class="comment">//或者类型</span></span><br><span class="line"><span class="keyword">this</span>.node.addComponent(cc.Node)</span><br><span class="line"><span class="comment">// OR</span></span><br><span class="line"><span class="keyword">this</span>.addComponent(typeName) <span class="comment">//与上面是 equivalent</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.getComponent(组件类型) <span class="comment">//获取第一个</span></span><br><span class="line"><span class="keyword">this</span>.getComponent(组件类型)<span class="comment">//equivalent</span></span><br><span class="line"><span class="keyword">this</span>.getComponents(组件类型) <span class="comment">//获取所有</span></span><br><span class="line"><span class="keyword">this</span>.getComponentInChildren(组件类型)</span><br><span class="line"><span class="keyword">this</span>.getComponentsInChildren(组件类型)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.destroy()<span class="comment">//可以通过获取组件之后调用destroy的方式删除组件</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>定时器操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.scheduleOnce(<span class="function"><span class="keyword">function</span>, <span class="title">delay</span>) //<span class="title">function</span>: 回调 <span class="title">delay</span>: 延迟</span></span><br><span class="line"><span class="function"><span class="title">this</span>.<span class="title">schedule</span>(<span class="params">function, interval, times, delay</span>) //<span class="title">interval</span>:一次的执行时间, <span class="title">times</span>: 次数</span></span><br><span class="line"><span class="function"><span class="title">this</span>.<span class="title">unschedule</span>(<span class="params">function</span>)  //取消对应回调函数的定时器操作</span></span><br><span class="line"><span class="function"><span class="title">this</span>.<span class="title">unscheduleAllCallbacks</span>(<span class="params"></span>)//取消所有的定时器操作</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Sprite组件使用"><a href="#Sprite组件使用" class="headerlink" title="Sprite组件使用"></a>Sprite组件使用</h2><ul>
+<li><p>换图</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.node.spriteFrame = <span class="keyword">this</span>.newFrame <span class="comment">//一定是小写</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>属性面板换图，就是更换属性面板的spriteFrame选项</p>
+</blockquote>
+</li>
+<li><p>Sprite大小模式</p>
+</li>
+<li><p>SLICED模式</p>
+</li>
+<li><p>FILLED模式实现进度条</p>
+</li>
+</ul>
+<h2 id="Button组件使用"><a href="#Button组件使用" class="headerlink" title="Button组件使用"></a>Button组件使用</h2><ul>
+<li><p>添加Button的方式</p>
+<ul>
+<li>创建一个Button组件</li>
+<li>添加Button组件到Sprite上</li>
+</ul>
+</li>
+<li><p>按钮状态</p>
+<ul>
+<li>normal</li>
+<li>hover</li>
+<li>pressed</li>
+<li>disable</li>
+</ul>
+</li>
+<li><p>过渡效果模式</p>
+<ul>
+<li><p>COLOR</p>
+<blockquote>
+<p>COLOR是环境光，所以可以直接给SpriteFrame上色</p>
+</blockquote>
+</li>
+<li><p>SPRITE</p>
+</li>
+<li><p>SCALE</p>
+<blockquote>
+<p>enableAutoGrayEffect 启用自动变灰</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>通过clickEvent添加事件</p>
+<ul>
+<li><p>调脚本内的函数，需设置节点，节点上的脚本，函数</p>
+</li>
+<li><p>这个方法有一个好处，就是可以传customEventData</p>
+<blockquote>
+<p>customEventData是字符串</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//编写点击事件</span></span><br><span class="line">onClickButton(event, customData)&#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以使用代码添加回调函数</p>
+<ul>
+<li><p>简便方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.getComponent(cc.Button).on(<span class="string">'click'</span>, <span class="keyword">this</span>.callback, <span class="keyword">this</span>)</span><br><span class="line"></span><br><span class="line">callback: <span class="function"><span class="keyword">function</span>(<span class="params">button</span>)</span>&#123;</span><br><span class="line"><span class="comment">//这种方式注册的事件，无法传递Customdata</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复杂方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过创建eventHandle对象来处理</span></span><br><span class="line"><span class="comment">//其实就是完整的把clickEvent用代码写一遍</span></span><br><span class="line"><span class="keyword">var</span> clickeEventHandle = <span class="keyword">new</span> cc.Component.EventHandler();</span><br><span class="line">clickEventHandler.target = <span class="keyword">this</span>.node;</span><br><span class="line">clickEventHandler.component = <span class="string">"mycomponent"</span>;<span class="comment">//这个是代码的文件名</span></span><br><span class="line">clickEventHandler.handler = <span class="string">"callback"</span><span class="comment">//函数名</span></span><br><span class="line">clickEventHandler.customEventData = <span class="string">"foobar"</span> <span class="comment">//customEventData</span></span><br><span class="line"><span class="keyword">var</span> button = node.getComponent(cc.Button)</span><br><span class="line">button.clickEvents.push(clickEventHandler) <span class="comment">//添加Handler</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>通过EventHandler.emit(params: Array)激发Button的ClickEvent</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> eventHandler = clickEvent[i]</span><br><span class="line">eventHandler.emit([<span class="string">''</span>, <span class="string">'customData'</span>])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Label组件使用"><a href="#Label组件使用" class="headerlink" title="Label组件使用"></a>Label组件使用</h2><p>没有笔记</p>
+<h2 id="AudioSource组件使用"><a href="#AudioSource组件使用" class="headerlink" title="AudioSource组件使用"></a>AudioSource组件使用</h2><ul>
+<li><p>如何创建</p>
+<ul>
+<li>创建AudioSource节点</li>
+<li>在节点下创建AudioSource组件</li>
+</ul>
+</li>
+<li><p>如何添加</p>
+<p>将音频文件拖到Clip处,支持wav,ogg,mp3文件格式</p>
+</li>
+<li><p>参数调节</p>
+<ul>
+<li>Clip: 音频剪辑</li>
+<li>Volume: [0,1]的值，表示音量大小的百分比</li>
+<li>Mute: 静音</li>
+<li>Loop: 循环</li>
+<li>Play on load: 加载时播放，勾选择音源在onEnable时播放</li>
+<li>Preload：预加载</li>
+</ul>
+</li>
+<li><p>代码操作AudioSource的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">audioSource.isPlaying <span class="comment">//是否播放，native平台不可用</span></span><br><span class="line">audioSource.clip </span><br><span class="line">audioSource.volume</span><br><span class="line">audioSource.mute</span><br><span class="line">audioSource.playOnLoad</span><br><span class="line">audioSource.loop</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>onLoad阶段无法代码操作属性,因为onLoad阶段cocos会将编辑器页面的属性导入到AudioSource组件中，在onLoad阶段后，对AudioSource的属性操作就会生效</p>
+</blockquote>
+</li>
+<li><p>代码中操作AudioSource组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取组件</span></span><br><span class="line"><span class="keyword">var</span> audio = <span class="keyword">this</span>.getComponent(cc.AudioSource)</span><br><span class="line"><span class="comment">//播放</span></span><br><span class="line">audio.play()</span><br><span class="line"><span class="comment">//暂停</span></span><br><span class="line">audio.pause()</span><br><span class="line"><span class="comment">//继续</span></span><br><span class="line">audio.resume()</span><br><span class="line"><span class="comment">//停止</span></span><br><span class="line">audio.stop()</span><br><span class="line"><span class="comment">//从头开始</span></span><br><span class="line">audio.rewind()</span><br><span class="line"><span class="comment">//获取当前播放时间</span></span><br><span class="line">audio.getCurrentTime()</span><br><span class="line"><span class="comment">//设置当前播放时间</span></span><br><span class="line">audio.setCurrentTime()</span><br><span class="line"><span class="comment">//获取音频长度</span></span><br><span class="line">audio.getDuration()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="动画编辑器使用"><a href="#动画编辑器使用" class="headerlink" title="动画编辑器使用"></a>动画编辑器使用</h2><p>Cocos creator自带的动画可以制作轻量的UI动画</p>
+<ul>
+<li><p>Animation组件</p>
+<p>它是一个普通的组件，用来给节点添加动画效果</p>
+</li>
+<li><p>添加动画效果？</p>
+<p>是通过creator编写Clip文件</p>
+</li>
+<li><p>编辑动画的流程</p>
+<ol>
+<li>创建节点</li>
+<li>添加Animation组件</li>
+<li>在动画编辑器编辑动画Clip</li>
+<li>把动画设置到Animation组件</li>
+</ol>
+</li>
+<li><p>属性动画制作</p>
+<ol>
+<li>对节点添加属性动画</li>
+<li>插入属性关键帧</li>
+<li>在动画末尾插入关键帧</li>
+<li>保存</li>
+</ol>
+</li>
+<li><p>帧动画：同理，修改spirteFrame即可</p>
+</li>
+<li><p>脚本控制动画</p>
+<ul>
+<li><p>关联动画组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法1</span></span><br><span class="line">animationComponent: &#123;</span><br><span class="line">    type: cc.Animation,</span><br><span class="line">    <span class="keyword">default</span>: <span class="literal">null</span>    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.animationComponent.dosomething()</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法2</span></span><br><span class="line"><span class="keyword">var</span> anode = <span class="keyword">this</span>.node.getChildByName(<span class="string">'animationNode'</span>).getComponent(cc.Animation)</span><br><span class="line">anode.dosomething()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>操作动画</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">anode.play([name]) <span class="comment">//if name exists, play the name clip, or play the default clip set in the Cocos Creator Attribute Panel</span></span><br><span class="line">anode.playAdditive([name]) <span class="comment">//与play一样，但是不会停止当前的动画，就是混合播放</span></span><br><span class="line">anode.stop([name]) </span><br><span class="line">anode.resume([name]) </span><br><span class="line">anode.pause([name]) <span class="comment">//有name就暂停name，没name就停止</span></span><br><span class="line"></span><br><span class="line">anode.getClips() <span class="comment">//返回clip数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Animation其它属性</p>
+<ul>
+<li>defaultClip: 默认动画</li>
+<li>currentClip:当前动画</li>
+</ul>
+</li>
+<li><p>Animation播放事件</p>
+<ul>
+<li>play</li>
+<li>stop</li>
+<li>pause</li>
+<li>resume</li>
+<li>lastframe：假如动画循环次数大于 1，当动画播放到最后一帧时</li>
+<li>finished：动画播放完成时</li>
+</ul>
+<blockquote>
+<p>事件的监听需要由animation对象的on函数完成</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>在动画中添加函数(事件帧)</p>
+<p>点击编辑器的“插入帧事件”即可添加事件帧。双击小白快即可进入编辑页面，填写方法名和参数。触发时Cocos会遍历节点的脚本组件去匹配这个方法。</p>
+<blockquote>
+<p>不易被察觉，尽可能少用</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Spine骨骼动画使用"><a href="#Spine骨骼动画使用" class="headerlink" title="Spine骨骼动画使用"></a>Spine骨骼动画使用</h2><p>暂不使用Spine，查看spine的<a href>手册</a>和[API](</p>
+<h2 id="Mask使用"><a href="#Mask使用" class="headerlink" title="Mask使用"></a>Mask使用</h2><p>没有笔记</p>
+<h2 id="Layout使用"><a href="#Layout使用" class="headerlink" title="Layout使用"></a>Layout使用</h2><p>没有笔记</p>
+<h2 id="ScrollView使用"><a href="#ScrollView使用" class="headerlink" title="ScrollView使用"></a>ScrollView使用</h2><p>没有笔记</p>
+<h2 id="cc-loader使用"><a href="#cc-loader使用" class="headerlink" title="cc.loader使用"></a>cc.loader使用</h2><p>Cocos有三种Pipeline</p>
+<ul>
+<li><p>assetloader</p>
+</li>
+<li><p>downloader</p>
+</li>
+<li>loader: 这个loader用来加载游戏资源</li>
+</ul>
+<blockquote>
+<p>loader的加载全部都是异步的</p>
+</blockquote>
+<ul>
+<li><p>加载本地资源</p>
+<ul>
+<li><p>cc.loader.loadRes</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cc.loader.loadRes(url, type, progressCallback(completedCount, totalCount, item), completeCallback(error, ret));</span><br><span class="line"></span><br><span class="line"><span class="comment">//example</span></span><br><span class="line">cc.loader.loadRes(<span class="string">'imgs/cocos'</span>, cc.SpriteFrame, progressCallBack(completedCount, totalCount, item)&#123;</span><br><span class="line">                  <span class="comment">// do something</span></span><br><span class="line">                  &#125;, completeCallBack(error, ret)&#123;</span><br><span class="line">    	<span class="comment">// do something</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意事项</p>
+<ol>
+<li>loadRes只能加载resources文件夹下的文件</li>
+<li>url不需要加文件后缀</li>
+</ol>
+</blockquote>
+</li>
+<li><p>cc.loader.loadResArray(urls, type, progressCallBack, completeCallBack)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> spriteFrames;</span><br><span class="line"><span class="keyword">var</span> urls = [<span class="string">'misc/characters/character_01'</span>, <span class="string">'misc/weapons/weapons_01'</span>];</span><br><span class="line">cc.loader.loadResArray(urls, cc.SpriteFrame, <span class="function"><span class="keyword">function</span> (<span class="params">err, assets</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        cc.error(err);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    spriteFrames = assets;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>cc.loader.loadResDir</p>
+<blockquote>
+<p><a href="https://docs.cocos.com/creator/api/zh/classes/loader.html?q=" target="_blank" rel="noopener">查看文档</a></p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>加载远程资源</p>
+<ul>
+<li><p>cc.loader.load(url, progressCallBack, completeCallBack)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">cc.loader.load(<span class="string">'a.png'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, tex</span>) </span>&#123;</span><br><span class="line">    cc.log(<span class="string">'Result should be a texture: '</span> + (tex <span class="keyword">instanceof</span> cc.Texture2D));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">cc.loader.load(<span class="string">'http://example.com/a.png'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, tex</span>) </span>&#123;</span><br><span class="line">    cc.log(<span class="string">'Should load a texture from external url: '</span> + (tex <span class="keyword">instanceof</span> cc.Texture2D));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//这种url为字典的形式一般用于url路径不带类型的形式，通过指定type来将ret转换成对应的类型</span></span><br><span class="line">cc.loader.load(&#123;<span class="attr">url</span>: <span class="string">'http://example.com/getImageREST?file=a.png'</span>, <span class="attr">type</span>: <span class="string">'png'</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err, tex</span>) </span>&#123;</span><br><span class="line">    cc.log(<span class="string">'Should load a texture from RESTful API by specify the type: '</span> + (tex <span class="keyword">instanceof</span> cc.Texture2D));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">cc.loader.load([<span class="string">'a.png'</span>, <span class="string">'b.json'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">errors, results</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (errors) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; errors.length; i++) &#123;</span><br><span class="line">            cc.log(<span class="string">'Error url ['</span> + errors[i] + <span class="string">']: '</span> + results.getError(errors[i]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> aTex = results.getContent(<span class="string">'a.png'</span>);</span><br><span class="line">    <span class="keyword">var</span> bJsonObj = results.getContent(<span class="string">'b.json'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>设置自动释放资源</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.loader.setAutoRelease(assetOrUrkOrUuid, boolean) <span class="comment">//第一个参数可以是类型，也可以是Url还可以是资源的Uuid</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>手动释放资源</p>
+<ul>
+<li>load/release释放</li>
+<li>loadRes/releaseRes释放</li>
+<li>loadResDir/releaseResDir</li>
+<li>releaseAll</li>
+<li>releaseAsset(object) //object如cc.Sprite</li>
+</ul>
+</li>
+</ul>
+<h2 id="cc-Widget屏幕适配"><a href="#cc-Widget屏幕适配" class="headerlink" title="cc.Widget屏幕适配"></a>cc.Widget屏幕适配</h2><p>cc.Widget解决的是不同屏幕下显示效果的问题，使用widget组件将使该节点与父节点相对布局</p>
+<ul>
+<li>如何使用<ul>
+<li>添加widget组件</li>
+<li>添加target</li>
+<li>设置属性</li>
+</ul>
+</li>
+</ul>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><ul>
+<li><p>assets目录下需创建res和resources两个目录，其中res是用来<strong>拖动添加的</strong>，而resources目录里的资源是<strong>代码添加的</strong>。如果不这么做，会导致项目打包之后setting.js文件异常的大。</p>
+<blockquote>
+<p>cc.loader.loadRes方法默认从resources目录下读取文件</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    AnCo Sun
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://ancosun.top/2019/05/02/cocos-creator-学习笔记/" title="cocos creator 学习笔记">http://ancosun.top/2019/05/02/cocos-creator-学习笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cocos-creator/" rel="tag"><i class="fa fa-tag"></i> cocos creator</a>
+          
+            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/30/英语学习-4-30/" rel="next" title="英语学习 4/30">
+                <i class="fa fa-chevron-left"></i> 英语学习 4/30
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/08/英语学习-5-8/" rel="prev" title="英语学习 - 5/8">
+                英语学习 - 5/8 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b439de4bfeba6f5" async="async"></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzM5NC8xMzkyOA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            作者信息
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="AnCo Sun">
+            
+              <p class="site-author-name" itemprop="name">AnCo Sun</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/AnCoSONG" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1197252996@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/king-david-66" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.1.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDE和目录结构"><span class="nav-number">1.2.</span> <span class="nav-text">IDE和目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏好设置"><span class="nav-number">1.3.</span> <span class="nav-text">偏好设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COCOS-生命周期函数"><span class="nav-number">1.4.</span> <span class="nav-text">COCOS 生命周期函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#场景树"><span class="nav-number">1.5.</span> <span class="nav-text">场景树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CC-NODE-属性"><span class="nav-number">1.6.</span> <span class="nav-text">CC.NODE 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cc-Component-介绍"><span class="nav-number">1.7.</span> <span class="nav-text">cc.Component 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点的动态操作"><span class="nav-number">1.8.</span> <span class="nav-text">节点的动态操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于脚本文件中编写cc-Class"><span class="nav-number">1.9.</span> <span class="nav-text">关于脚本文件中编写cc.Class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件系统"><span class="nav-number">1.10.</span> <span class="nav-text">事件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统内置事件"><span class="nav-number">1.10.1.</span> <span class="nav-text">系统内置事件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-触摸事件"><span class="nav-number">1.10.1.1.</span> <span class="nav-text">1.触摸事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-系统键盘事件"><span class="nav-number">1.10.1.2.</span> <span class="nav-text">2. 系统键盘事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-鼠标事件"><span class="nav-number">1.10.1.3.</span> <span class="nav-text">3. 鼠标事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-其它事件"><span class="nav-number">1.10.1.4.</span> <span class="nav-text">4. 其它事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-自定义事件"><span class="nav-number">1.10.1.5.</span> <span class="nav-text">5. 自定义事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标空间"><span class="nav-number">1.11.</span> <span class="nav-text">坐标空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动作系统"><span class="nav-number">1.12.</span> <span class="nav-text">动作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Component详解"><span class="nav-number">1.13.</span> <span class="nav-text">Component详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sprite组件使用"><span class="nav-number">1.14.</span> <span class="nav-text">Sprite组件使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Button组件使用"><span class="nav-number">1.15.</span> <span class="nav-text">Button组件使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Label组件使用"><span class="nav-number">1.16.</span> <span class="nav-text">Label组件使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AudioSource组件使用"><span class="nav-number">1.17.</span> <span class="nav-text">AudioSource组件使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画编辑器使用"><span class="nav-number">1.18.</span> <span class="nav-text">动画编辑器使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spine骨骼动画使用"><span class="nav-number">1.19.</span> <span class="nav-text">Spine骨骼动画使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mask使用"><span class="nav-number">1.20.</span> <span class="nav-text">Mask使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Layout使用"><span class="nav-number">1.21.</span> <span class="nav-text">Layout使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ScrollView使用"><span class="nav-number">1.22.</span> <span class="nav-text">ScrollView使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cc-loader使用"><span class="nav-number">1.23.</span> <span class="nav-text">cc.loader使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cc-Widget屏幕适配"><span class="nav-number">1.24.</span> <span class="nav-text">cc.Widget屏幕适配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TIPS"><span class="nav-number">1.25.</span> <span class="nav-text">TIPS</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AnCo Sun</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">40.0k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65896388";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("cwgLnoz8fTbsbR69SnYK2SDS-gzGzoHsz", "MIzbjQAfNSgqaPx6MRjrQe9Y");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

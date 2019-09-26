@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AnCo Sun Personal Blog</title>
+  
+  <subtitle>Sometimes it&#39;s hard 2 face reality</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ancosun.top/"/>
+  <updated>2019-09-26T05:18:26.533Z</updated>
+  <id>http://ancosun.top/</id>
+  
+  <author>
+    <name>AnCo Sun</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字节跳动2、3面回顾总结</title>
+    <link href="http://ancosun.top/2019/09/12/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A82%E3%80%813%E9%9D%A2%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/"/>
+    <id>http://ancosun.top/2019/09/12/字节跳动2、3面回顾总结/</id>
+    <published>2019-09-12T05:27:51.000Z</published>
+    <updated>2019-09-26T05:18:26.533Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是迁移blog到mac平台上的第一篇，不得不说macOS真滴好看，有钱就是舒坦。这篇回忆一下在字节跳动二、三面的情况，做一个总结。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://ancosun.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="前端 - JavaScript" scheme="http://ancosun.top/tags/%E5%89%8D%E7%AB%AF-JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字节跳动前端一面总结笔记</title>
+    <link href="http://ancosun.top/2019/09/05/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93%E7%AC%94%E8%AE%B0/"/>
+    <id>http://ancosun.top/2019/09/05/字节跳动前端一面总结笔记/</id>
+    <published>2019-09-05T09:51:13.000Z</published>
+    <updated>2019-09-05T20:15:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是第一次面试过程中遇到的一些问题总结。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://ancosun.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="前端" scheme="http://ancosun.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://ancosun.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字节跳动前端面试笔记(3)</title>
+    <link href="http://ancosun.top/2019/09/05/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0-3/"/>
+    <id>http://ancosun.top/2019/09/05/字节跳动前端面试笔记-3/</id>
+    <published>2019-09-05T09:49:58.000Z</published>
+    <updated>2019-09-05T13:31:06.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接（2）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://ancosun.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="前端" scheme="http://ancosun.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://ancosun.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字节跳动前端面试笔记(2)</title>
+    <link href="http://ancosun.top/2019/09/05/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0-2/"/>
+    <id>http://ancosun.top/2019/09/05/字节跳动前端面试笔记-2/</id>
+    <published>2019-09-05T09:49:46.000Z</published>
+    <updated>2019-09-05T13:30:28.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接（1）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://ancosun.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="前端" scheme="http://ancosun.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://ancosun.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字节跳动前端面试题笔记(1)</title>
+    <link href="http://ancosun.top/2019/09/03/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <id>http://ancosun.top/2019/09/03/字节跳动前端面试题笔记/</id>
+    <published>2019-09-03T12:15:21.000Z</published>
+    <updated>2019-09-17T02:49:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一篇字节跳动前端实习生面试的准备笔记，摘了我在网上搜索到的一些前辈被问到的问题，希望有所准备能够多答几个。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="http://ancosun.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="前端" scheme="http://ancosun.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://ancosun.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JQuery学习笔记</title>
+    <link href="http://ancosun.top/2019/08/05/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://ancosun.top/2019/08/05/JQuery学习笔记/</id>
+    <published>2019-08-05T14:44:21.000Z</published>
+    <updated>2019-09-03T12:28:24.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git—设置代理和取消代理</title>
+    <link href="http://ancosun.top/2019/07/22/git%E2%80%94-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%96%E6%B6%88%E4%BB%A3%E7%90%86/"/>
+    <id>http://ancosun.top/2019/07/22/git—-设置代理和取消代理/</id>
+    <published>2019-07-21T17:51:06.000Z</published>
+    <updated>2019-07-21T18:12:34.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇记录一下GIT设置代理和取消代理的方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://ancosun.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语模考总结 - 口语/写作</title>
+    <link href="http://ancosun.top/2019/05/17/%E8%8B%B1%E8%AF%AD%E6%A8%A1%E8%80%83%E6%80%BB%E7%BB%93-%E5%8F%A3%E8%AF%AD-%E5%86%99%E4%BD%9C/"/>
+    <id>http://ancosun.top/2019/05/17/英语模考总结-口语-写作/</id>
+    <published>2019-05-17T07:12:57.000Z</published>
+    <updated>2019-05-17T15:13:56.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Fake it until you make it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天做了一次TPO54的模考，其实有2道题我都是做到过的，所以阅读分数奇高。但是听力问题很大。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 5/15</title>
+    <link href="http://ancosun.top/2019/05/15/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-5-15/"/>
+    <id>http://ancosun.top/2019/05/15/英语学习-5-15/</id>
+    <published>2019-05-15T06:04:45.000Z</published>
+    <updated>2019-05-15T17:52:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fake it until u make it.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习--05/14</title>
+    <link href="http://ancosun.top/2019/05/14/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-05-14/"/>
+    <id>http://ancosun.top/2019/05/14/英语学习-05-14/</id>
+    <published>2019-05-14T07:11:29.000Z</published>
+    <updated>2019-05-14T18:22:40.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fake it until you make it.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习--05/13</title>
+    <link href="http://ancosun.top/2019/05/13/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-05-13/"/>
+    <id>http://ancosun.top/2019/05/13/英语学习-05-13/</id>
+    <published>2019-05-13T12:32:32.000Z</published>
+    <updated>2019-05-14T14:40:28.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fake it until u make it.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微积分半期复习</title>
+    <link href="http://ancosun.top/2019/05/10/%E5%BE%AE%E7%A7%AF%E5%88%86%E5%8D%8A%E6%9C%9F%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://ancosun.top/2019/05/10/微积分半期复习/</id>
+    <published>2019-05-10T05:12:35.000Z</published>
+    <updated>2019-05-13T12:27:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;微积分半期&quot;&gt;&lt;a href=&quot;#微积分半期&quot; class=&quot;headerlink&quot; title=&quot;微积分半期&quot;&gt;&lt;/a&gt;微积分半期&lt;/h1&gt;&lt;p&gt;半期考试已经考完了(一如既往的炸了)，这是半期考试前写的,之后要抽空丰富(latex要我的命~~)…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://ancosun.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Math" scheme="http://ancosun.top/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 - 5/8</title>
+    <link href="http://ancosun.top/2019/05/08/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-5-8/"/>
+    <id>http://ancosun.top/2019/05/08/英语学习-5-8/</id>
+    <published>2019-05-08T12:02:38.000Z</published>
+    <updated>2019-05-08T18:36:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fake it until you become it.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cocos creator 学习笔记</title>
+    <link href="http://ancosun.top/2019/05/02/cocos-creator-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://ancosun.top/2019/05/02/cocos-creator-学习笔记/</id>
+    <published>2019-05-02T06:17:25.000Z</published>
+    <updated>2019-05-04T05:30:04.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;这是一篇学习笔记，内容可能比较粗糙，很多部分来源于&lt;a href=&quot;https://docs.cocos.com/creator/api/zh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档&lt;/a&gt;和&lt;a href=&quot;https://www.bilibili.com/video/av36321524/?p=16&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;教程视频&lt;/a&gt;，仅供参考，欢迎指正&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="游戏开发" scheme="http://ancosun.top/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="cocos creator" scheme="http://ancosun.top/tags/cocos-creator/"/>
+    
+      <category term="javascript" scheme="http://ancosun.top/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 4/30</title>
+    <link href="http://ancosun.top/2019/04/30/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-4-30/"/>
+    <id>http://ancosun.top/2019/04/30/英语学习-4-30/</id>
+    <published>2019-04-30T11:46:53.000Z</published>
+    <updated>2019-05-13T13:26:34.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;单词&quot;&gt;&lt;a href=&quot;#单词&quot; class=&quot;headerlink&quot; title=&quot;单词&quot;&gt;&lt;/a&gt;单词&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;sever: 分离切开，cut off&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;densel
+      
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 4/27</title>
+    <link href="http://ancosun.top/2019/04/27/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-4-27/"/>
+    <id>http://ancosun.top/2019/04/27/英语学习-4-27/</id>
+    <published>2019-04-27T08:32:32.000Z</published>
+    <updated>2019-04-30T11:52:38.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;You cannot win the war against the world, if you cannot win the war against your own mind.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 4/25</title>
+    <link href="http://ancosun.top/2019/04/25/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-4-25/"/>
+    <id>http://ancosun.top/2019/04/25/英语学习-4-25/</id>
+    <published>2019-04-25T10:00:26.000Z</published>
+    <updated>2019-04-27T09:28:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;You cannot win the war against the world, if you cannot win the war against your own mind.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 4/23</title>
+    <link href="http://ancosun.top/2019/04/23/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-4-23/"/>
+    <id>http://ancosun.top/2019/04/23/英语学习-4-23/</id>
+    <published>2019-04-23T04:06:22.000Z</published>
+    <updated>2019-04-27T09:32:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;You cannot win the war against the world, if you cannot win the war against your own mind.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习 04-22</title>
+    <link href="http://ancosun.top/2019/04/22/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0-04-22/"/>
+    <id>http://ancosun.top/2019/04/22/英语学习-04-22/</id>
+    <published>2019-04-22T12:22:15.000Z</published>
+    <updated>2019-04-25T10:13:40.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;You can’t win the war against the world, if you cannot win the war against your own mind.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语打卡 — 4/10</title>
+    <link href="http://ancosun.top/2019/04/10/%E8%8B%B1%E8%AF%AD%E6%89%93%E5%8D%A1%E2%80%94%E2%80%94%E2%80%944-10/"/>
+    <id>http://ancosun.top/2019/04/10/英语打卡———4-10/</id>
+    <published>2019-04-10T04:50:27.000Z</published>
+    <updated>2019-04-20T11:28:30.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;又度过了要死要活的周一周二，周三终于有时间做精听了！&lt;/p&gt;
+&lt;p&gt;4-13号继续看。&lt;/p&gt;
+&lt;p&gt;4月20日&lt;/p&gt;
+&lt;p&gt;You can’t win the war against the world if you can’t win the war against your own mind.&lt;/p&gt;
+&lt;p&gt;Self-discipline is the center of every material success.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常生活" scheme="http://ancosun.top/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="English-Learning" scheme="http://ancosun.top/tags/English-Learning/"/>
+    
+  </entry>
+  
+</feed>
